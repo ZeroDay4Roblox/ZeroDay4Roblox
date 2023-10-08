@@ -510,7 +510,7 @@ end
 
 -- Scripts
 
-local function TMIMTMT_fake_script() -- MainFrame.Handler 
+local function XCXQTS_fake_script() -- MainFrame.Handler 
 	local script = Instance.new('LocalScript', MainFrame)
 	local req = require
 	local require = function(obj)
@@ -538,7 +538,7 @@ local function TMIMTMT_fake_script() -- MainFrame.Handler
 		-- Get the player's position.
 		local player = game.Players.LocalPlayer
 		local position = player.Character.HumanoidRootPart.Position
-	
+	    local currentRange = range
 		-- Create a list of all characters in the game.
 		local characters = game.Players:GetPlayers()
 	
@@ -551,7 +551,7 @@ local function TMIMTMT_fake_script() -- MainFrame.Handler
 			local distance = (character.Character.HumanoidRootPart.Position - position).Magnitude
 	
 			-- If the character is closer than the current nearest character and within the range, update the nearest character and distance.
-			if distance < nearestDistance and distance < range and character ~= player then
+			if distance < nearestDistance and distance < currentRange and character ~= player then
 				nearestCharacter = character
 				nearestDistance = distance
 			end
@@ -562,7 +562,7 @@ local function TMIMTMT_fake_script() -- MainFrame.Handler
 	end
 	
 	
-	local v = findNearestCharacter(30).Character
+	local v = findNearestCharacter(30)
 	
 	
 	ZeroLibrary:CreateButton('Speed', 'Blatant', function(callback)
@@ -575,9 +575,7 @@ local function TMIMTMT_fake_script() -- MainFrame.Handler
 	
 	ZeroLibrary:CreateButton('AuraTest', 'Blatant', function(callback)
 		while true do
-			if v then
-				
-				
+			if v.Character then
 				local args = {
 					[1] = v,
 					[2] = false,
@@ -610,13 +608,13 @@ local function TMIMTMT_fake_script() -- MainFrame.Handler
 		end
 	end)
 	
-	ZeroLibrary:CreateButton('ESP', 'Utilites', function(callback)
-		ZeroLibrary:Notify('Error', 'ESP Not Finished', 5)
+	ZeroLibrary:CreateButton('UnInject', 'World', function(callback)
+		script.Parent.Parent:Destroy()
 	end)
 	
 end
-coroutine.wrap(TMIMTMT_fake_script)()
-local function MQMNC_fake_script() -- World.Smooth GUI Dragging 
+coroutine.wrap(XCXQTS_fake_script)()
+local function OAWG_fake_script() -- World.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', World)
 	local req = require
 	local require = function(obj)
@@ -681,8 +679,8 @@ local function MQMNC_fake_script() -- World.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(MQMNC_fake_script)()
-local function GYCKHXK_fake_script() -- Blatant.Smooth GUI Dragging 
+coroutine.wrap(OAWG_fake_script)()
+local function INGUJFK_fake_script() -- Blatant.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Blatant)
 	local req = require
 	local require = function(obj)
@@ -747,8 +745,8 @@ local function GYCKHXK_fake_script() -- Blatant.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(GYCKHXK_fake_script)()
-local function GDJR_fake_script() -- Visual.Smooth GUI Dragging 
+coroutine.wrap(INGUJFK_fake_script)()
+local function EHPYG_fake_script() -- Visual.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Visual)
 	local req = require
 	local require = function(obj)
@@ -813,8 +811,8 @@ local function GDJR_fake_script() -- Visual.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(GDJR_fake_script)()
-local function YMUKI_fake_script() -- Combat.Smooth GUI Dragging 
+coroutine.wrap(EHPYG_fake_script)()
+local function ONCKA_fake_script() -- Combat.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Combat)
 	local req = require
 	local require = function(obj)
@@ -879,4 +877,4 @@ local function YMUKI_fake_script() -- Combat.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(YMUKI_fake_script)()
+coroutine.wrap(ONCKA_fake_script)()
