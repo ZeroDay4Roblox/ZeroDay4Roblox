@@ -10,8 +10,6 @@
 -- Instances
 
 local ZeroDay = Instance.new("ScreenGui")
-local Title1 = Instance.new("TextLabel")
-local Title2 = Instance.new("TextLabel")
 local MainFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Arraylist = Instance.new("Frame")
@@ -22,22 +20,25 @@ local World = Instance.new("Frame")
 local Window = Instance.new("Frame")
 local UIListLayout_2 = Instance.new("UIListLayout")
 local TextLabel = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
 local Blatant = Instance.new("Frame")
 local Window_2 = Instance.new("Frame")
 local ButtonTemp = Instance.new("TextButton")
 local UIListLayout_3 = Instance.new("UIListLayout")
 local TextLabel_2 = Instance.new("TextLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
 local Visual = Instance.new("Frame")
 local Window_3 = Instance.new("Frame")
 local ButtonTemp_2 = Instance.new("TextButton")
 local UIListLayout_4 = Instance.new("UIListLayout")
 local TextLabel_3 = Instance.new("TextLabel")
+local ImageLabel_3 = Instance.new("ImageLabel")
 local Combat = Instance.new("Frame")
 local Window_4 = Instance.new("Frame")
 local ButtonTemp_3 = Instance.new("TextButton")
 local UIListLayout_5 = Instance.new("UIListLayout")
 local TextLabel_4 = Instance.new("TextLabel")
-local ButtonTemp_4 = Instance.new("TextButton")
+local ImageLabel_4 = Instance.new("ImageLabel")
 local Stacker = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
 local Notifications = Instance.new("Frame")
@@ -45,7 +46,12 @@ local UICorner_4 = Instance.new("UICorner")
 local Thingy = Instance.new("TextLabel")
 local Thingy2 = Instance.new("TextLabel")
 local UIListLayout_6 = Instance.new("UIListLayout")
-local Title3 = Instance.new("TextLabel")
+local ButtonTemp_4 = Instance.new("TextButton")
+local Extra = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local Text = Instance.new("TextLabel")
+local VersionText = Instance.new("TextLabel")
+local ExtraText = Instance.new("TextLabel")
 
 -- Properties
 
@@ -54,43 +60,11 @@ ZeroDay.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ZeroDay.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ZeroDay.ResetOnSpawn = false
 
-Title1.Name = "Title1"
-Title1.Parent = ZeroDay
-Title1.BackgroundColor3 = Color3.new(1, 1, 1)
-Title1.BackgroundTransparency = 1
-Title1.BorderColor3 = Color3.new(0, 0, 0)
-Title1.BorderSizePixel = 0
-Title1.Position = UDim2.new(0, 0, -0.0123456791, 0)
-Title1.Size = UDim2.new(0, 200, 0, 50)
-Title1.Font = Enum.Font.Cartoon
-Title1.Text = "Zero"
-Title1.TextColor3 = Color3.new(1, 0, 0)
-Title1.TextScaled = true
-Title1.TextSize = 14
-Title1.TextWrapped = true
-Title1.TextXAlignment = Enum.TextXAlignment.Left
-
-Title2.Name = "Title2"
-Title2.Parent = ZeroDay
-Title2.BackgroundColor3 = Color3.new(1, 1, 1)
-Title2.BackgroundTransparency = 1
-Title2.BorderColor3 = Color3.new(0, 0, 0)
-Title2.BorderSizePixel = 0
-Title2.Position = UDim2.new(0.0732689202, 0, -0.0123456791, 0)
-Title2.Size = UDim2.new(0, 73, 0, 50)
-Title2.Font = Enum.Font.Cartoon
-Title2.Text = "Day"
-Title2.TextColor3 = Color3.new(0.14902, 0.0901961, 1)
-Title2.TextScaled = true
-Title2.TextSize = 14
-Title2.TextWrapped = true
-Title2.TextXAlignment = Enum.TextXAlignment.Right
-
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = ZeroDay
 MainFrame.BackgroundColor3 = Color3.new(0.156863, 0.156863, 0.156863)
 MainFrame.BackgroundTransparency = 1
-MainFrame.BorderColor3 = Color3.new(0, 0, 0)
+MainFrame.BorderColor3 = Color3.new(0.145098, 0.0823529, 1)
 MainFrame.BorderSizePixel = 0
 MainFrame.Position = UDim2.new(0.240740746, 0, 0.203703701, 0)
 MainFrame.Size = UDim2.new(0, 494, 0, 464)
@@ -128,7 +102,7 @@ Template.TextWrapped = true
 
 World.Name = "World"
 World.Parent = MainFrame
-World.BackgroundColor3 = Color3.new(0.831373, 0, 0.0156863)
+World.BackgroundColor3 = Color3.new(0.133333, 0.133333, 0.133333)
 World.BorderColor3 = Color3.new(0, 0, 0)
 World.BorderSizePixel = 0
 World.Position = UDim2.new(0.927125514, 0, -0.0387931019, 0)
@@ -151,8 +125,8 @@ TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel.BackgroundTransparency = 1
 TextLabel.BorderColor3 = Color3.new(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(-0.160583943, 0, 0.114285715, 0)
-TextLabel.Size = UDim2.new(0, 129, 0, 26)
+TextLabel.Position = UDim2.new(0.321167886, 0, 0.114285715, 0)
+TextLabel.Size = UDim2.new(0, 74, 0, 26)
 TextLabel.Font = Enum.Font.Gotham
 TextLabel.Text = "World"
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
@@ -160,9 +134,17 @@ TextLabel.TextScaled = true
 TextLabel.TextSize = 25
 TextLabel.TextWrapped = true
 
+ImageLabel.Parent = World
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 1
+ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Size = UDim2.new(0, 33, 0, 35)
+ImageLabel.Image = "rbxassetid://14190084505"
+
 Blatant.Name = "Blatant"
 Blatant.Parent = MainFrame
-Blatant.BackgroundColor3 = Color3.new(0.831373, 0, 0.0156863)
+Blatant.BackgroundColor3 = Color3.new(0.133333, 0.133333, 0.133333)
 Blatant.BorderColor3 = Color3.new(0, 0, 0)
 Blatant.BorderSizePixel = 0
 Blatant.Position = UDim2.new(0.139676109, 0, -0.0387931019, 0)
@@ -202,8 +184,8 @@ TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel_2.BackgroundTransparency = 1
 TextLabel_2.BorderColor3 = Color3.new(0, 0, 0)
 TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(-0.131386861, 0, 0.114285715, 0)
-TextLabel_2.Size = UDim2.new(0, 129, 0, 26)
+TextLabel_2.Position = UDim2.new(0.218978107, 0, 0.114285715, 0)
+TextLabel_2.Size = UDim2.new(0, 107, 0, 26)
 TextLabel_2.Font = Enum.Font.Gotham
 TextLabel_2.Text = "Blatant"
 TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
@@ -211,9 +193,17 @@ TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 25
 TextLabel_2.TextWrapped = true
 
+ImageLabel_2.Parent = Blatant
+ImageLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_2.BackgroundTransparency = 1
+ImageLabel_2.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Size = UDim2.new(0, 36, 0, 37)
+ImageLabel_2.Image = "rbxassetid://12269196880"
+
 Visual.Name = "Visual"
 Visual.Parent = MainFrame
-Visual.BackgroundColor3 = Color3.new(0.831373, 0, 0.0156863)
+Visual.BackgroundColor3 = Color3.new(0.133333, 0.133333, 0.133333)
 Visual.BorderColor3 = Color3.new(0, 0, 0)
 Visual.BorderSizePixel = 0
 Visual.Position = UDim2.new(0.564777315, 0, -0.0409482755, 0)
@@ -253,8 +243,8 @@ TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel_3.BackgroundTransparency = 1
 TextLabel_3.BorderColor3 = Color3.new(0, 0, 0)
 TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(-0.131386861, 0, 0.114285715, 0)
-TextLabel_3.Size = UDim2.new(0, 129, 0, 26)
+TextLabel_3.Position = UDim2.new(0.262773722, 0, 0.114285715, 0)
+TextLabel_3.Size = UDim2.new(0, 101, 0, 26)
 TextLabel_3.Font = Enum.Font.Gotham
 TextLabel_3.Text = "Visual"
 TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
@@ -262,9 +252,17 @@ TextLabel_3.TextScaled = true
 TextLabel_3.TextSize = 25
 TextLabel_3.TextWrapped = true
 
+ImageLabel_3.Parent = Visual
+ImageLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_3.BackgroundTransparency = 1
+ImageLabel_3.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel_3.BorderSizePixel = 0
+ImageLabel_3.Size = UDim2.new(0, 36, 0, 37)
+ImageLabel_3.Image = "rbxassetid://9390684315"
+
 Combat.Name = "Combat"
 Combat.Parent = MainFrame
-Combat.BackgroundColor3 = Color3.new(0.831373, 0, 0.0156863)
+Combat.BackgroundColor3 = Color3.new(0.133333, 0.133333, 0.133333)
 Combat.BorderColor3 = Color3.new(0, 0, 0)
 Combat.BorderSizePixel = 0
 Combat.Position = UDim2.new(-0.273279339, 0, -0.043103449, 0)
@@ -304,8 +302,8 @@ TextLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel_4.BackgroundTransparency = 1
 TextLabel_4.BorderColor3 = Color3.new(0, 0, 0)
 TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(-0.131386861, 0, 0.114285715, 0)
-TextLabel_4.Size = UDim2.new(0, 129, 0, 26)
+TextLabel_4.Position = UDim2.new(0.267734498, 0, 0.0571428575, 0)
+TextLabel_4.Size = UDim2.new(0, 100, 0, 26)
 TextLabel_4.Font = Enum.Font.Gotham
 TextLabel_4.Text = "Combat"
 TextLabel_4.TextColor3 = Color3.new(1, 1, 1)
@@ -313,22 +311,13 @@ TextLabel_4.TextScaled = true
 TextLabel_4.TextSize = 25
 TextLabel_4.TextWrapped = true
 
-ButtonTemp_4.Name = "ButtonTemp"
-ButtonTemp_4.Parent = MainFrame
-ButtonTemp_4.BackgroundColor3 = Color3.new(0.294118, 0.168627, 1)
-ButtonTemp_4.BackgroundTransparency = 1
-ButtonTemp_4.BorderColor3 = Color3.new(0, 0, 0)
-ButtonTemp_4.BorderSizePixel = 0
-ButtonTemp_4.Position = UDim2.new(0.00238479604, 0, 0, 0)
-ButtonTemp_4.Size = UDim2.new(0, 138, 0, 37)
-ButtonTemp_4.Visible = false
-ButtonTemp_4.Font = Enum.Font.Gotham
-ButtonTemp_4.Text = "skjfngksjfnkjgnskjdfgnksjdfg"
-ButtonTemp_4.TextColor3 = Color3.new(1, 1, 1)
-ButtonTemp_4.TextScaled = true
-ButtonTemp_4.TextSize = 14
-ButtonTemp_4.TextWrapped = true
-ButtonTemp_4.TextXAlignment = Enum.TextXAlignment.Left
+ImageLabel_4.Parent = Combat
+ImageLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel_4.BackgroundTransparency = 1
+ImageLabel_4.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel_4.BorderSizePixel = 0
+ImageLabel_4.Size = UDim2.new(0, 36, 0, 37)
+ImageLabel_4.Image = "rbxassetid://98792525"
 
 Stacker.Name = "Stacker"
 Stacker.Parent = MainFrame
@@ -388,21 +377,78 @@ UIListLayout_6.Parent = Stacker
 UIListLayout_6.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout_6.Padding = UDim.new(0, 5)
 
-Title3.Name = "Title3"
-Title3.Parent = ZeroDay
-Title3.BackgroundColor3 = Color3.new(1, 1, 1)
-Title3.BackgroundTransparency = 1
-Title3.BorderColor3 = Color3.new(0, 0, 0)
-Title3.BorderSizePixel = 0
-Title3.Position = UDim2.new(0.136876002, 0, -0.0123456791, 0)
-Title3.Size = UDim2.new(0, 365, 0, 35)
-Title3.Font = Enum.Font.Cartoon
-Title3.Text = "1.0"
-Title3.TextColor3 = Color3.new(0.14902, 0.0901961, 1)
-Title3.TextScaled = true
-Title3.TextSize = 14
-Title3.TextWrapped = true
-Title3.TextXAlignment = Enum.TextXAlignment.Left
+ButtonTemp_4.Name = "ButtonTemp"
+ButtonTemp_4.Parent = MainFrame
+ButtonTemp_4.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+ButtonTemp_4.BackgroundTransparency = 1
+ButtonTemp_4.BorderColor3 = Color3.new(0, 0, 0)
+ButtonTemp_4.BorderSizePixel = 0
+ButtonTemp_4.Position = UDim2.new(0.0117828371, 0, 0, 0)
+ButtonTemp_4.Size = UDim2.new(0, 136, 0, 37)
+ButtonTemp_4.Visible = false
+ButtonTemp_4.Font = Enum.Font.Gotham
+ButtonTemp_4.Text = "skjfngksjfnkjgnskjdfgnksjdfg"
+ButtonTemp_4.TextColor3 = Color3.new(1, 1, 1)
+ButtonTemp_4.TextScaled = true
+ButtonTemp_4.TextSize = 14
+ButtonTemp_4.TextWrapped = true
+ButtonTemp_4.TextXAlignment = Enum.TextXAlignment.Left
+
+Extra.Name = "Extra"
+Extra.Parent = ZeroDay
+Extra.BackgroundColor3 = Color3.new(0.203922, 0.223529, 0.211765)
+Extra.BorderColor3 = Color3.new(0.0627451, 0.266667, 1)
+Extra.BorderSizePixel = 3
+Extra.Position = UDim2.new(0, 0, -0.0135802468, 0)
+Extra.Size = UDim2.new(0, 289, 0, 94)
+
+UICorner_5.Parent = Extra
+
+Text.Name = "Text"
+Text.Parent = Extra
+Text.BackgroundColor3 = Color3.new(1, 1, 1)
+Text.BackgroundTransparency = 1
+Text.BorderColor3 = Color3.new(0, 0, 0)
+Text.BorderSizePixel = 0
+Text.Position = UDim2.new(-0.160805508, 0, -0.141761541, 0)
+Text.Size = UDim2.new(0, 268, 0, 59)
+Text.Font = Enum.Font.SourceSans
+Text.Text = "ZeroDay"
+Text.TextColor3 = Color3.new(0.282353, 0.0431373, 1)
+Text.TextScaled = true
+Text.TextSize = 100
+Text.TextWrapped = true
+
+VersionText.Name = "VersionText"
+VersionText.Parent = Extra
+VersionText.BackgroundColor3 = Color3.new(1, 1, 1)
+VersionText.BackgroundTransparency = 1
+VersionText.BorderColor3 = Color3.new(0, 0, 0)
+VersionText.BorderSizePixel = 0
+VersionText.Position = UDim2.new(0.622078061, 0, -0.00717336591, 0)
+VersionText.Size = UDim2.new(0, 34, 0, 28)
+VersionText.Font = Enum.Font.SourceSans
+VersionText.Text = "1.4.2"
+VersionText.TextColor3 = Color3.new(0.282353, 0.0431373, 1)
+VersionText.TextScaled = true
+VersionText.TextSize = 100
+VersionText.TextWrapped = true
+
+ExtraText.Name = "ExtraText"
+ExtraText.Parent = Extra
+ExtraText.BackgroundColor3 = Color3.new(1, 1, 1)
+ExtraText.BackgroundTransparency = 1
+ExtraText.BorderColor3 = Color3.new(0, 0, 0)
+ExtraText.BorderSizePixel = 0
+ExtraText.Position = UDim2.new(0.00428312644, 0, 0.343100369, 0)
+ExtraText.Size = UDim2.new(0, 272, 0, 61)
+ExtraText.Font = Enum.Font.SourceSans
+ExtraText.Text = "Beta Release"
+ExtraText.TextColor3 = Color3.new(0.282353, 0.0431373, 1)
+ExtraText.TextScaled = true
+ExtraText.TextSize = 12
+ExtraText.TextWrapped = true
+ExtraText.TextXAlignment = Enum.TextXAlignment.Left
 
 -- Module Scripts
 
@@ -415,8 +461,15 @@ do -- MainFrame.ZeroLibrary
 		local ZeroDay = script.Parent
 		
 		local TweenService = game:GetService("TweenService")
+		local UIS = game:GetService("UserInputService")
 		
 		
+		
+		UIS.InputBegan:Connect(function(input)
+			if input.KeyCode == Enum.KeyCode.V then
+				script.Parent.Visible = not script.Parent.Visible
+			end
+		end)
 		
 		local ZeroLibrary = {}
 		
@@ -430,17 +483,26 @@ do -- MainFrame.ZeroLibrary
 			NotificationTemp.Visible = true
 			
 			
+			local tweenInfo = TweenService:Create(NotificationTemp, TweenInfo.new(1.8, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {BackgroundTransparency = 0})
+			local tweenInfo2 = TweenService:Create(NotificationTemp.Thingy, TweenInfo.new(1.8, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {TextTransparency = 0})
+			local tweenInfo3 = TweenService:Create(NotificationTemp.Thingy2, TweenInfo.new(1.8, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {TextTransparency = 0})
+			tweenInfo:Play()
+			tweenInfo2:Play()
+			tweenInfo3:Play()
 			wait(duration)
 			NotificationTemp:Destroy()
-			
 		end
 		
 		function ZeroLibrary:CreateButton(name,window,callback)
 			local ButtonTemp = ZeroDay.ButtonTemp:Clone()
 			ButtonTemp.Visible = true
 			local Options = {Enabled = false}
+			local Arraylist = ZeroDay.Arraylist
+			local Temp = Arraylist.Template:Clone()
 			
-			
+			Temp.Visible = true
+			Temp.Name = name
+			Temp.Text = name
 		
 			
 			if window == 'Blatant' then
@@ -453,22 +515,18 @@ do -- MainFrame.ZeroLibrary
 				ButtonTemp.Parent = ZeroDay.Combat.Window
 			end
 			ButtonTemp.MouseButton1Click:Connect(function()
-				local Arraylist = ZeroDay.Arraylist
-				local Temp = Arraylist.Template:Clone()
-				Temp.Visible = true
-				Temp.Name = name
-				Temp.Text = name
+				
+				
 				
 				
 				if Options.Enabled == false then
 					if callback then
 						callback()
 					end
-					ZeroLibrary:Notify('Toggled', name..' was enabled', 5)
+					
 					Options.Enabled = true
 					ButtonTemp.BackgroundTransparency = 0
-				else
-					ZeroLibrary:Notify('Toggled', name..' was disabled', 5)
+				elseif Options.Enabled == true then
 					Temp:Destroy()
 					Options.Enabled = false
 					ButtonTemp.BackgroundTransparency = 1
@@ -510,7 +568,7 @@ end
 
 -- Scripts
 
-local function XCXQTS_fake_script() -- MainFrame.Handler 
+local function QDWOG_fake_script() -- MainFrame.Handler 
 	local script = Instance.new('LocalScript', MainFrame)
 	local req = require
 	local require = function(obj)
@@ -521,100 +579,18 @@ local function XCXQTS_fake_script() -- MainFrame.Handler
 		return req(obj)
 	end
 
-	local ZeroLibrary = require(script.Parent.ZeroLibrary)
-	local CurrentVersion = "BETA - RELEASE (0prime fuck me please!!!)"
-	script.Parent.Parent.Title3.Text = CurrentVersion
+	local Library = require(script.Parent.ZeroLibrary)
 	local UIS = game:GetService("UserInputService")
 	
-	local lplr = game.Players.LocalPlayer
-	
-	UIS.InputBegan:Connect(function(input)
-		if input.KeyCode == Enum.KeyCode.V then
-			script.Parent.Visible = not script.Parent.Visible
-		end
-	end)
-	
-	local function findNearestCharacter(range)
-		-- Get the player's position.
-		local player = game.Players.LocalPlayer
-		local position = player.Character.HumanoidRootPart.Position
-	    local currentRange = range
-		-- Create a list of all characters in the game.
-		local characters = game.Players:GetPlayers()
-	
-		-- Find the nearest character to the player's position within the range.
-		local nearestCharacter = nil
-		local nearestDistance = math.huge
-	
-		for i, character in ipairs(characters) do
-			-- Calculate the distance between the player's position and the character's position.
-			local distance = (character.Character.HumanoidRootPart.Position - position).Magnitude
-	
-			-- If the character is closer than the current nearest character and within the range, update the nearest character and distance.
-			if distance < nearestDistance and distance < currentRange and character ~= player then
-				nearestCharacter = character
-				nearestDistance = distance
-			end
-		end
-	
-		-- Return the nearest character, or nil if no characters were found.
-		return nearestCharacter
-	end
-	
-	
-	local v = findNearestCharacter(30)
-	
-	
-	ZeroLibrary:CreateButton('Speed', 'Blatant', function(callback)
-		while wait() do
-			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
-		end
-	end)
-	
-	
-	
-	ZeroLibrary:CreateButton('AuraTest', 'Blatant', function(callback)
-		while true do
-			if v.Character then
-				local args = {
-					[1] = v,
-					[2] = false,
-					[3] = "WoodenSword"
-				}
-	
-				while true do
-					wait(0.001)
-					game:GetService("ReplicatedStorage").Packages.Knit.Services.ToolService.RF.AttackPlayerWithSword:InvokeServer(unpack(args))
-				end
-				
-			else
-				return nil
-			end
-	
-			if game.PlaceId == 11630038968 then
-				local args = {
-					[1] = v,
-					[2] = false,
-					[3] = "WoodenSword"
-				}
-	
-				while true do
-					wait(0.001)
-					game:GetService("ReplicatedStorage").Packages.Knit.Services.ToolService.RF.AttackPlayerWithSword:InvokeServer(unpack(args))
-				end
-			else
-				return nil
-			end
-		end
-	end)
-	
-	ZeroLibrary:CreateButton('UnInject', 'World', function(callback)
-		script.Parent.Parent:Destroy()
+	Library:CreateButton('Aura','Blatant', function(callback)
+		print("hello world")
+		local hi = "hi"
+		print(hi)
 	end)
 	
 end
-coroutine.wrap(XCXQTS_fake_script)()
-local function OAWG_fake_script() -- World.Smooth GUI Dragging 
+coroutine.wrap(QDWOG_fake_script)()
+local function DXWIC_fake_script() -- World.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', World)
 	local req = require
 	local require = function(obj)
@@ -679,8 +655,8 @@ local function OAWG_fake_script() -- World.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(OAWG_fake_script)()
-local function INGUJFK_fake_script() -- Blatant.Smooth GUI Dragging 
+coroutine.wrap(DXWIC_fake_script)()
+local function PRRCEI_fake_script() -- Blatant.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Blatant)
 	local req = require
 	local require = function(obj)
@@ -745,8 +721,8 @@ local function INGUJFK_fake_script() -- Blatant.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(INGUJFK_fake_script)()
-local function EHPYG_fake_script() -- Visual.Smooth GUI Dragging 
+coroutine.wrap(PRRCEI_fake_script)()
+local function YMXUFG_fake_script() -- Visual.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Visual)
 	local req = require
 	local require = function(obj)
@@ -811,8 +787,8 @@ local function EHPYG_fake_script() -- Visual.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(EHPYG_fake_script)()
-local function ONCKA_fake_script() -- Combat.Smooth GUI Dragging 
+coroutine.wrap(YMXUFG_fake_script)()
+local function KYZUJ_fake_script() -- Combat.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Combat)
 	local req = require
 	local require = function(obj)
@@ -877,4 +853,4 @@ local function ONCKA_fake_script() -- Combat.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(ONCKA_fake_script)()
+coroutine.wrap(KYZUJ_fake_script)()
